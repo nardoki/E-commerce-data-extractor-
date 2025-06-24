@@ -33,7 +33,7 @@ def preprocess_amharic_csv(input_file='scraped_data.csv', output_file='preproces
         print("❌ Could not find a column with 'message' or 'channel' in the name.")
         return
 
-    # Clean message column safely
+    # Clean the message column safely
     df['clean_message'] = df[message_col].apply(clean_amharic_text)
 
     output_cols = [channel_col, 'clean_message']
