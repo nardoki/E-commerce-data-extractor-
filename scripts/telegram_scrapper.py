@@ -16,6 +16,7 @@ def clean_text(text):
     text = re.sub(r'\s+', ' ', text).strip()
     return text
 
+    #Connects to Telegram and scrapes a defined number of messages from each specified channel.
 async def fetch_channel_messages(api_id, api_hash, phone, channels, limit=100):
     async with TelegramClient("user_session", api_id, api_hash) as client:
         await client.start(phone=phone)
@@ -66,6 +67,7 @@ if __name__ == "__main__":
     api_hash = input("Enter your api_hash: ").strip()
     phone = input("Enter your phone number (with country code): ").strip()
 
+     # List of Telegram channels to scrape
     channels = [
         'Shageronlinestore',
         'aradabrand2',
