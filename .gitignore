@@ -1,2 +1,7 @@
 mlruns/
 media/
+
+*.csv
+scraped_data.csv
+
+amharic_ner_model/
